@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grove Collective</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Work+Sans:wght@300;400;500;600&family=Archivo:wght@500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ VINE SCROLL PROGRESS (signature element) ============ -->
+<div class="vine-rail" aria-hidden="true">
+  <svg class="vine-svg" viewBox="0 0 20 1000" preserveAspectRatio="none">
+    <path class="vine-track" d="M10 0 C 2 100, 18 200, 10 300 C 2 400, 18 500, 10 600 C 2 700, 18 800, 10 900 C 5 950, 10 980, 10 1000" />
+    <path class="vine-fill" d="M10 0 C 2 100, 18 200, 10 300 C 2 400, 18 500, 10 600 C 2 700, 18 800, 10 900 C 5 950, 10 980, 10 1000" />
+  </svg>
+</div>
+
+<!-- ============ EVENTS TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track" id="tickerTrack">
+    <!-- duplicated in JS for seamless loop -->
+    <span class="ticker-item">🌿 Community Planting Day — Sept 14</span>
+    <span class="ticker-item">🌿 Volunteer Orientation — Sept 21</span>
+    <span class="ticker-item">🌿 Harvest Potluck — Oct 3</span>
+    <span class="ticker-item">🌿 Youth Garden Workshop — Oct 11</span>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <div class="logo-slot">
+    <a href="#home" class="logo-text">Grove Collective</a>
+  </div>
+
+  <nav class="site-nav">
+    <a href="#home">Home</a>
+    <a href="#education">Education</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#blog">Blog</a>
+    <a href="#reading">Reading List</a>
+    <div class="contact-wrap">
+      <button class="nav-contact-btn" id="contactBtn" aria-expanded="false" aria-controls="contactPanel">Contact</button>
+      <div class="contact-panel" id="contactPanel">
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="contact-row">
+          <span class="contact-icon">◎</span> @grovecollective
+        </a>
+        <a href="tel:+18174011445" class="contact-row">
+          <span class="contact-icon">☏</span> (817) 401-1445
+        </a>
+        <a href="mailto:hello@grovecollective.org" class="contact-row">
+          <span class="contact-icon">✉</span> hello@grovecollective.org
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="header-actions">
+    <a href="marketplace.html" class="marketplace-btn">Grove Marketplace</a>
+    <a href="#donate" class="donate-btn-outline">Donate</a>
+  </div>
+</header>
+
+<!-- ============ MAIN ============ -->
+<main>
+
+  <!-- HERO / MISSION -->
+  <section class="hero" id="home">
+    <div class="hero-photo-slot">
+      <!-- Fallback texture, always present -->
+      <div class="photo-placeholder" id="heroPhoto"><span>drop hero-photo.jpeg in this folder</span></div>
+      <img src="_ (5).jpeg" alt="" class="hero-photo-img" id="heroPhotoImg" onerror="this.style.display='none'">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal" data-reveal>
+      <p class="eyebrow">Grove Collective</p>
+      <h1 class="mission-statement">
+        Welcome to the Collective.<br>Inspiring those that roam the Earth to love the Earth.
+      </h1>
+      <p class="hero-sub">We are an environmentally conscious non-profit organization that strives to promote conservation efforts, support community building, and provide accessible information in order to drive humanity towards a sustainable future.</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">↓</div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section education" id="education">
+    <div class="section-label reveal" data-reveal><span>Learn</span></div>
+
+    <div class="split-block reveal" data-reveal>
+      <div class="split-text">
+        <h2>Education Programs</h2>
+        <p>Workshops, field days, and classroom partnerships that connect neighbors with the land. Placeholder copy — replace with your program details.</p>
+      </div>
+      <div class="split-media"><div class="media-ph"></div></div>
+    </div>
+
+    <div class="split-block reverse reveal" data-reveal>
+      <div class="split-text">
+        <h2>Youth Garden Corps</h2>
+        <p>Hands-on growing seasons for students, paired with mentors from the collective. Placeholder copy.</p>
+      </div>
+      <div class="split-media"><div class="media-ph"></div></div>
+    </div>
+
+    <div class="card-row">
+      <div class="mini-card reveal" data-reveal>
+        <h3>Composting 101</h3>
+        <p>Short course, placeholder text.</p>
+      </div>
+      <div class="mini-card reveal" data-reveal>
+        <h3>Native Seed Saving</h3>
+        <p>Short course, placeholder text.</p>
+      </div>
+      <div class="mini-card reveal" data-reveal>
+        <h3>Soil & Sustainability</h3>
+        <p>Short course, placeholder text.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery" id="gallery">
+    <div class="section-label reveal" data-reveal><span>See</span></div>
+    <h2 class="reveal" data-reveal>Photo Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item tall reveal" data-reveal></div>
+      <div class="gallery-item reveal" data-reveal></div>
+      <div class="gallery-item reveal" data-reveal></div>
+      <div class="gallery-item wide reveal" data-reveal></div>
+      <div class="gallery-item reveal" data-reveal></div>
+      <div class="gallery-item reveal" data-reveal></div>
+      <div class="gallery-item tall reveal" data-reveal></div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="section blog" id="blog">
+    <div class="section-label reveal" data-reveal><span>Read</span></div>
+    <h2 class="reveal" data-reveal>From the Blog</h2>
+    <div class="blog-row">
+      <article class="blog-card reveal" data-reveal>
+        <div class="media-ph small"></div>
+        <p class="blog-date">Placeholder date</p>
+        <h3>Post title goes here</h3>
+        <p>One or two lines of placeholder excerpt text sit here.</p>
+      </article>
+      <article class="blog-card reveal" data-reveal>
+        <div class="media-ph small"></div>
+        <p class="blog-date">Placeholder date</p>
+        <h3>Post title goes here</h3>
+        <p>One or two lines of placeholder excerpt text sit here.</p>
+      </article>
+      <article class="blog-card reveal" data-reveal>
+        <div class="media-ph small"></div>
+        <p class="blog-date">Placeholder date</p>
+        <h3>Post title goes here</h3>
+        <p>One or two lines of placeholder excerpt text sit here.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- READING LIST -->
+  <section class="section reading" id="reading">
+    <div class="section-label reveal" data-reveal><span>Reading List</span></div>
+    <h2 class="reveal" data-reveal>Books We Recommend</h2>
+    <div class="reading-list">
+      <div class="book-row reveal" data-reveal>
+        <div class="book-cover-ph"></div>
+        <div class="book-info"><h4>Book Title</h4><p>Author Name — one line placeholder note on why it matters.</p></div>
+      </div>
+      <div class="book-row reveal" data-reveal>
+        <div class="book-cover-ph"></div>
+        <div class="book-info"><h4>Book Title</h4><p>Author Name — one line placeholder note on why it matters.</p></div>
+      </div>
+      <div class="book-row reveal" data-reveal>
+        <div class="book-cover-ph"></div>
+        <div class="book-info"><h4>Book Title</h4><p>Author Name — one line placeholder note on why it matters.</p></div>
+      </div>
+      <div class="book-row reveal" data-reveal>
+        <div class="book-cover-ph"></div>
+        <div class="book-info"><h4>Book Title</h4><p>Author Name — one line placeholder note on why it matters.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section class="section donate-section" id="donate">
+    <div class="donate-inner reveal" data-reveal>
+      <h2>Support the Grove</h2>
+      <p>Placeholder copy about why donations matter and where the money goes.</p>
+      <a href="#" class="donate-btn large">Donate Now</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Grove Collective. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
