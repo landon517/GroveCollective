@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grove Marketplace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Work+Sans:wght@300;400;500;600&family=Archivo:wght@500;600&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="marketplace.css">
+</head>
+<body>
+
+<header class="mp-header">
+  <a href="index.html" class="mp-logo">Grove Collective</a>
+  <a href="index.html" class="mp-back">← Back to main site</a>
+</header>
+
+<main class="mp-main">
+
+  <section class="mp-intro">
+    <p class="mp-eyebrow">Grove Marketplace</p>
+    <h1>Goods from the Collective</h1>
+    <p class="mp-sub">A small, considered shop — apparel, prints, and everyday goods that support our work. Items are added as they become available.</p>
+  </section>
+
+  <section class="mp-filter-bar">
+    <button class="mp-filter-btn active" data-filter="all">All</button>
+    <button class="mp-filter-btn" data-filter="apparel">Apparel</button>
+    <button class="mp-filter-btn" data-filter="accessories">Accessories</button>
+    <button class="mp-filter-btn" data-filter="prints">Prints</button>
+  </section>
+
+  <section class="mp-grid" id="mpGrid">
+    <div class="mp-card" data-category="apparel">
+      <div class="mp-card-image"></div>
+      <p class="mp-card-name">Grove Tee</p>
+      <p class="mp-card-price">Coming soon</p>
+    </div>
+    <div class="mp-card" data-category="apparel">
+      <div class="mp-card-image"></div>
+      <p class="mp-card-name">Canvas Hat</p>
+      <p class="mp-card-price">Coming soon</p>
+    </div>
+    <div class="mp-card" data-category="accessories">
+      <div class="mp-card-image"></div>
+      <p class="mp-card-name">Tote Bag</p>
+      <p class="mp-card-price">Coming soon</p>
+    </div>
+    <div class="mp-card" data-category="accessories">
+      <div class="mp-card-image"></div>
+      <p class="mp-card-name">Enamel Pin Set</p>
+      <p class="mp-card-price">Coming soon</p>
+    </div>
+    <div class="mp-card" data-category="prints">
+      <div class="mp-card-image"></div>
+      <p class="mp-card-name">Field Print No.1</p>
+      <p class="mp-card-price">Coming soon</p>
+    </div>
+    <div class="mp-card" data-category="prints">
+      <div class="mp-card-image"></div>
+      <p class="mp-card-name">Field Print No.2</p>
+      <p class="mp-card-price">Coming soon</p>
+    </div>
+    <div class="mp-card" data-category="apparel">
+      <div class="mp-card-image"></div>
+      <p class="mp-card-name">Crewneck</p>
+      <p class="mp-card-price">Coming soon</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mp-footer">
+  <p>© <span id="mpYear"></span> Grove Collective. All rights reserved.</p>
+</footer>
+
+<script src="marketplace.js"></script>
+</body>
+</html>
